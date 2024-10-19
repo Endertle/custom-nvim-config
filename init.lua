@@ -25,5 +25,5 @@ require('lazy').setup {
   require 'plugins.gitsigns',
   require 'plugins.comment',
 
-  require 'themes.onedarkpro',
+  require 'themes.catpuccin',
 }
