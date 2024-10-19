@@ -30,8 +30,8 @@ return {
       },
       themes = function(colors)
         return {
-          NvimTreeGitDirty = { fg = colors.yellow },
           NvimTreeFolderIcon = { link = 'Directory' },
+          NvimTreeGitDirty = { fg = colors.yellow },
         }
       end,
       italics = true,
