@@ -37,6 +37,14 @@ return {
       cond = hide_in_width,
     }
 
+    local parentDir = {
+      function()
+        local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':t') -- Extract parent directory name
+        return dir_name ~= '' and dir_name or '[No Directory]' -- Fallback if there's no directory
+      end,
+      icon = '', -- Optional folder icon (remove if not needed)
+    }
+
     require('lualine').setup {
       options = {
         icons_enabled = true,
@@ -55,7 +63,7 @@ return {
         lualine_b = { filename },
         lualine_c = { 'branch' },
         lualine_x = { diagnostics, diff, { 'encoding', cond = hide_in_width }, { 'filetype', cond = hide_in_width } },
-        lualine_y = { 'location' },
+        lualine_y = { parentDir },
         lualine_z = { 'progress' },
       },
       inactive_sections = {

@@ -24,6 +24,7 @@ require('lazy').setup {
   require 'plugins.misc',
   require 'plugins.gitsigns',
   require 'plugins.comment',
+  require 'plugins.autotag',
 
-  require 'themes.catpuccin',
+  require 'themes.one_monokai',
 }

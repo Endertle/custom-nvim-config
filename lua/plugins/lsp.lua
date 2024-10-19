@@ -163,7 +163,15 @@ return {
       --
       -- But for many setups, the LSP (`ts_ls`) will work just fine
       ts_ls = {},
-      --
+      eslint_lsp = {},
+      tailwindcss = {},
+      eslint = {},
+      cssls = {},
+      html = {},
+      bashls = {},
+      emmet_language_server = {
+        filetypes = { 'css', 'html', 'javascript', 'javascriptreact', 'less', 'sass', 'scss', 'pug', 'typescriptreact' },
+      },
 
       lua_ls = {
         -- cmd = {...},

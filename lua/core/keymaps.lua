@@ -12,6 +12,12 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set('i', 'jj', '<ESC>', opts)
 vim.keymap.set('i', 'JJ', '<ESC>', opts)
 
+-- Move inside insert mode
+vim.keymap.set('i', '<C-h>', '<Left>', opts) -- Move left in insert mode
+vim.keymap.set('i', '<C-j>', '<Down>', opts) -- Move down in insert mode
+vim.keymap.set('i', '<C-k>', '<Up>', opts) -- Move up in insert mode
+vim.keymap.set('i', '<C-l>', '<Right>', opts) -- Move right in insert mode
+
 -- Navigate between splits
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>', opts)
 vim.keymap.set('n', '<C-j>', ':wincmd j<CR>', opts)
@@ -45,3 +51,7 @@ vim.keymap.set('n', '<leader>xs', ':close<CR>', opts) -- close current split win
 
 -- Exit search using Escape
 vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>lf', function()
+  vim.diagnostic.open_float { border = 'rounded' }
+end, opts)
