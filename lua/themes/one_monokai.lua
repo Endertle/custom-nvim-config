@@ -66,6 +66,8 @@ return {
           -- ['@keyword.function'] = { fg = colors.cyan },
 
           CursorLine = { bg = colors.black },
+
+          ['@lsp.type.property'] = { fg = colors.fg },
         }
       end,
 
