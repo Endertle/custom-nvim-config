@@ -55,3 +55,6 @@ vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = tru
 vim.keymap.set('n', '<leader>lf', function()
   vim.diagnostic.open_float { border = 'rounded' }
 end, opts)
+
+-- Keymap to trigger code action
+vim.api.nvim_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)

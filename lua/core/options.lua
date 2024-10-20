@@ -34,8 +34,43 @@ vim.opt.timeoutlen = 400
 vim.opt.undofile = true
 
 -- interval for writing swap file to disk, also used by gitsigns
-vim.opt.updatetime = 250
+vim.opt.updatetime = 300
 
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
 vim.opt.whichwrap:append '<>[]hl'
+
+-- always make the cursor center
+vim.opt.scrolloff = 999
+
+-- show diagnostic float when hover
+vim.api.nvim_create_autocmd({ 'CursorHold' }, {
+  pattern = '*',
+  callback = function()
+    for _, winid in pairs(vim.api.nvim_tabpage_list_wins(0)) do
+      if vim.api.nvim_win_get_config(winid).zindex then
+        return
+      end
+    end
+    vim.diagnostic.open_float {
+      scope = 'cursor',
+      focusable = false,
+      border = 'rounded',
+      close_events = {
+        'CursorMoved',
+        'CursorMovedI',
+        'BufHidden',
+        'InsertCharPre',
+        'WinLeave',
+      },
+    }
+  end,
+})
+
+-- Underline all diagnostic types without customizing colors
+vim.diagnostic.config {
+  virtual_text = true, -- Display virtual text alongside the underline
+  signs = true, -- Use signs in the sign column
+  underline = true, -- Enable underline for all diagnostics
+  update_in_insert = false, -- Do not update diagnostics while in insert mode
+}

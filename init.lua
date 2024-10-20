@@ -1,5 +1,6 @@
 require 'core.keymaps' -- Load general keymaps
 require 'core.options' -- Load general options
+
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -25,6 +26,11 @@ require('lazy').setup {
   require 'plugins.gitsigns',
   require 'plugins.comment',
   require 'plugins.autotag',
+  require 'plugins.tabout',
+  require 'plugins.neoscroll',
+  require 'plugins.surround',
+  require 'plugins.lightbulb',
+  require 'plugins.lazygit',
 
   require 'themes.one_monokai',
 }
