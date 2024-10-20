@@ -20,6 +20,9 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.mouse = 'a'
 
+-- cursor
+vim.opt.cursorline = true
+
 -- 256 colorspace
 vim.g.base16_colorspace = 256
 vim.g.base16_background_transparent = 1

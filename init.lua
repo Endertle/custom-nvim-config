@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup {
   require 'plugins.nvimtree',
-  require 'plugins.bufferline',
+  -- require 'plugins.bufferline',
   require 'plugins.lualine',
   require 'plugins.oil',
   require 'plugins.treesitter',

@@ -64,8 +64,11 @@ return {
           DiagnosticUnderlineHint = { sp = colors.purple, underline = true },
 
           -- ['@keyword.function'] = { fg = colors.cyan },
+
+          CursorLine = { bg = colors.black },
         }
       end,
+
       italics = true,
     }
     vim.cmd.colorscheme 'one_monokai'
