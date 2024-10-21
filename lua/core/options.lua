@@ -44,7 +44,7 @@ vim.opt.updatetime = 300
 vim.opt.whichwrap:append '<>[]hl'
 
 -- always make the cursor center
-vim.opt.scrolloff = 999
+vim.opt.scrolloff = 5
 
 -- show diagnostic float when hover
 vim.api.nvim_create_autocmd({ 'CursorHold' }, {
