@@ -1,8 +1,8 @@
 # custom-nvim-config
 
 ## Requirements
-- node/npm
-- nvim
+- [NodeJS](https://link-url-here.org)
+- [Neovim](https://neovim.io/)
 
 ### Command:
 ```
