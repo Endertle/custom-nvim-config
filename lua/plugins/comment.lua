@@ -9,5 +9,18 @@ return {
 
     vim.keymap.set('v', '<C-_>', "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", opts)
     vim.keymap.set('v', '<C-/>', "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", opts)
+
+    require('Comment').setup {
+      pre_hook = function()
+        return vim.bo.commentstring
+      end,
+    }
   end,
+
+  lazy = false,
+
+  dependencies = {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    'nvim-treesitter/nvim-treesitter',
+  },
 }
