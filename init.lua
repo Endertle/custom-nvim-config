@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup {
-  require 'plugins.nvimtree',
+  -- require 'plugins.nvimtree',
   -- require 'plugins.bufferline',
   require 'plugins.lualine',
   require 'plugins.oil',
@@ -26,11 +26,12 @@ require('lazy').setup {
   require 'plugins.gitsigns',
   require 'plugins.comment',
   require 'plugins.autotag',
-  require 'plugins.tabout',
+  -- require 'plugins.tabout',
   require 'plugins.neoscroll',
   require 'plugins.surround',
   require 'plugins.lightbulb',
   require 'plugins.lazygit',
+  require 'plugins.oil-git-status',
 
   require 'themes.one_monokai',
 }

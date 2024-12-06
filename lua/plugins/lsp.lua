@@ -163,6 +163,13 @@ return {
       --
       -- But for many setups, the LSP (`ts_ls`) will work just fine
       ts_ls = {},
+      intelephense = {},
+      clangd = {
+        cmd = {
+          'clangd',
+          '--offset-encoding=utf-16',
+        },
+      },
       eslint_lsp = {},
       tailwindcss = {},
       eslint = {},

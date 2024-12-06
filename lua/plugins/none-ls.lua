@@ -14,6 +14,9 @@ return {
     require('mason-null-ls').setup {
       ensure_installed = {
         'prettierd',
+        'pint',
+        'php_pretty',
+        'clang_format',
         'prettier', -- ts/js formatter
         'stylua', -- lua formatter
         'eslint_d', -- ts/js linter
@@ -27,6 +30,8 @@ return {
     local sources = {
       diagnostics.checkmake,
       formatting.prettier.with { filetypes = { 'html', 'json', 'yaml', 'markdown', 'js', 'ts' } },
+      formatting.clang_format,
+      formatting.pint,
       formatting.prettierd,
       formatting.shfmt.with { args = { '-i', '4' } },
       formatting.stylua,
