@@ -36,6 +36,9 @@ return {
       win_options = {
         signcolumn = 'yes:1',
       },
+      keymaps = {
+        ['-'] = { 'actions.close', mode = 'n' },
+      },
     }
 
     vim.keymap.set('n', '-', require('oil').open_float, { desc = 'Open parent directory' })
