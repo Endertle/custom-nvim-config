@@ -7,7 +7,7 @@ return {
 
   config = function()
     require('oil-git-status').setup {
-      show_ignored = true, -- show files that match gitignore with !!
+      show_ignored = false, -- show files that match gitignore with !!
     }
   end,
 }
